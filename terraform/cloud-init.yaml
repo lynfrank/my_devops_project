@@ -7,13 +7,18 @@ packages:
   - apache2
   - curl
   - gnupg
-
+ 
 runcmd:
   # Démarrer et activer docker
   - sudo apt update -y
   - sudo apt install docker.io -y
   - systemctl enable docker
   - systemctl start docker
+  - sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  - sudo chmod +x /usr/local/bin/docker-compose
+  - sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  - sudo apt update
+  - sudo apt install docker-compose-plugin -y
 
   # Ajouter la clé Jenkins et repo
   - sudo apt update
