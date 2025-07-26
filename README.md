@@ -15,7 +15,7 @@ This project implements an automated CI/CD pipeline for a containerized applicat
 - **Infrastructure as Code**: Terraform
 - **CI/CD**: Jenkins, GitHub Webhooks
 - **Containerization**: Docker
-- **Scripting**: Bash, YAML
+- **Scripting**: Bash, YAML .
 - **Database**: MySQL
 - **Web Server**: Apache
 
