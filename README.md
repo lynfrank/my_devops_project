@@ -4,7 +4,7 @@
 
 ## 🌟 Project Overview
 This project implements an automated CI/CD pipeline for a containerized application:
-- **Infrastructure**: Azure spot VM provisioned with Terraform
+- **Infrastructure**: Azure spot VM provisioned with Terraform.
 - **CI/CD**: Jenkins pipeline triggered by GitHub webhooks
 - **Containerization**: Docker for application deployment
 - **Application**: Sample voting app from [docker/getting-started-app](https://github.com/docker/getting-started-app)
