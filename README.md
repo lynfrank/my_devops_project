@@ -17,7 +17,7 @@ This project implements an automated CI/CD pipeline for a containerized applicat
 - **Containerization**: Docker
 - **Scripting**: Bash, YAML .
 - **Database**: MySQL
-- **Web Server**: Apache
+- **Web Server**: Apache.
 
 ## 📦 Key Components
 
