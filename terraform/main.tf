@@ -6,6 +6,7 @@ terraform {
       version = "~> 3.0"
     }
   }
+  required_version = ">= 1.1.0 "
 }
 provider "azurerm" {
   features {}
@@ -36,8 +37,21 @@ resource "azurerm_public_ip" "devops_pip" {
   resource_group_name = azurerm_resource_group.devops_rg.name
   location            = azurerm_resource_group.devops_rg.location
   allocation_method   = "Static"
+  sku = "Standard"
   depends_on          = [azurerm_resource_group.devops_rg]
 }
+# resource "azurerm_public_ip" "devops_pip" {
+#   name                = var.public_ip_name
+#   resource_group_name = azurerm_resource_group.devops_rg.name
+#   location            = azurerm_resource_group.devops_rg.location
+#   allocation_method   = "Dynamic"
+#   sku                 = "Standard"
+
+#   tags = {
+#     environment = "devops"
+#   }
+# }
+
 resource "azurerm_network_security_group" "devops_nsg" {
   name                = var.nsg_name
   location            = azurerm_resource_group.devops_rg.location
