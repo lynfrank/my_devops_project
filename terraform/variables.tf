@@ -2,7 +2,7 @@
 
 variable "location" {
   type        = string
-  default     = "westus"
+  default     = "francecentral"
   description = "Azure region for resources"
 }
 variable "admin_username" {
@@ -24,7 +24,7 @@ variable "vm_size" {
 variable "resource_group_name" {
   type        = string
   default     = "testing-terraform-rg"
-  description = "Name of the RG"
+  description = "Name of thess RG"
 }
 variable "vnet_name" {
   type        = string
@@ -61,8 +61,6 @@ variable "ubuntu_image" {
     offer     = "0001-com-ubuntu-server-jammy"
     sku       = "22_04-lts-gen2"
     version   = "latest"
-
-
 
   }
 }
